@@ -1,0 +1,74 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(#4ECDC4, #556270) no-repeat center center fixed;
+  color:white;
+}
+
+.black
+{
+  background-color: black;
+  opacity: 0.5;
+}
+
+.box {
+  height: 850px;
+  width: 500px;
+  padding:40px 50px;
+  border-radius:5px;
+  margin-top: 15px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.69);
+}
+
+.stopa{
+  width: 100%;
+  margin: 0 auto;
+
+  border-radius:5px;
+  margin-top: 15px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.69);
+}
+
+.navbar{
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.69);
+}
+
+.scroll {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+}
+
+.text_black{
+  color:black;
+}
+
+.correct {
+  background-color: green;
+}
+
+.incorrect {
+  background-color: red;
+}
+
+.list-group-item {
+  cursor: pointer;
+}
+
+h2 {
+  color: blueviolet;
+}
+
+p{
+  margin-left: 20px;
+}
+
+a{
+  color: blueviolet;
+}
