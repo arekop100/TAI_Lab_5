@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(#4ECDC4, #556270) no-repeat center center fixed;
+  color:white;
+}
