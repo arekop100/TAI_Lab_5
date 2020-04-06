@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from './components/home/home.component';
 import {ContactComponent} from './components/contact/contact.component';
+import {BlogItemDetailsComponent} from "./components/blog-item-details/blog-item-details.component";
 import {BlogComponent} from './components/blog/blog.component';
 
 
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'blog',
     component: BlogComponent
+  },
+  {
+    path: 'blog/detail/:id',
+    component: BlogItemDetailsComponent
   }
 ];
 
@@ -25,3 +30,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
