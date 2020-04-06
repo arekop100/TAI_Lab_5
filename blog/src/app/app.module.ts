@@ -16,6 +16,8 @@ import {DataService} from "./services/data.service";
 import { SummaryPipe } from './pipes/summary.pipe';
 import { SearchBarComponent } from './shared/search-bar/search-bar.component';
 import {FormsModule} from "@angular/forms";
+import { FilterPipe } from './pipes/filter.pipe';
+
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import {FormsModule} from "@angular/forms";
     BlogItemImageComponent,
     BlogItemDetailsComponent,
     SummaryPipe,
-    SearchBarComponent
+    SearchBarComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,

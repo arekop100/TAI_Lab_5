@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'home',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  @Input() filterText: string;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getName($event) {
+    this.filterText = $event
   }
 
 }
