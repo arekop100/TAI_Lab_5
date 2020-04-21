@@ -9,6 +9,7 @@ export class BlogItemComponent implements OnInit {
 
   @Input () image: string;
   @Input () text: string;
+  @Input () id: string;
   constructor() { }
 
   ngOnInit(): void {
