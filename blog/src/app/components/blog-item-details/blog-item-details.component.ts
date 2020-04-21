@@ -9,8 +9,8 @@ import {DataService} from "../../services/data.service";
 })
 export class BlogItemDetailsComponent implements OnInit {
 
-  image = 'http://osnews.pl/wp-content/uploads/2016/06/it-grafika.jpg';
-  text = 'Tytuł';
+  image = '';
+  text = '';
 
   constructor(private dataService: DataService, private route: ActivatedRoute) {
   }
