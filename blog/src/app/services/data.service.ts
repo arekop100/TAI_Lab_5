@@ -4,7 +4,7 @@ import {HttpClient} from '@angular/common/http';
 @Injectable()
 export class DataService {
 
-  private url = 'https://jsonplaceholder.typicode.com/photos';
+  private url = 'https://blogtai.herokuapp.com/api/posts';
 
   constructor(private http: HttpClient) {
   }
