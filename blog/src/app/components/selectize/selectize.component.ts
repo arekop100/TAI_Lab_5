@@ -1,4 +1,3 @@
-import { Component, OnInit } from '@angular/core';
 import {
   Component,
   ViewChild,
@@ -9,15 +8,15 @@ import {fromEvent} from 'rxjs/observable/fromEvent';
 import {debounceTime, distinctUntilChanged, map, switchMap} from 'rxjs/operators';
 import {DataService} from '../../services/data.service';
 
-
 @Component({
   selector: 'selectize',
   templateUrl: './selectize.component.html',
   styleUrls: ['./selectize.component.scss']
 })
-export class SelectizeComponent implements OnInit {
+export class SelectizeComponent implements AfterViewInit {
 
-  @ViewChild('input') input: ElementRef;
+
+  @ViewChild('input',{static:false}) input: ElementRef;
   public posts$;
 
   constructor(private dataService: DataService) {
@@ -34,5 +33,4 @@ export class SelectizeComponent implements OnInit {
       this.posts$ = results;
     });
   }
-
 }
