@@ -4,6 +4,7 @@ import {HomeComponent} from './components/home/home.component';
 import {ContactComponent} from './components/contact/contact.component';
 import {BlogItemDetailsComponent} from "./components/blog-item-details/blog-item-details.component";
 import {BlogComponent} from './components/blog/blog.component';
+import {AddPostComponent} from "./components/add-post/add-post.component";
 
 
 const routes: Routes = [
@@ -22,8 +23,13 @@ const routes: Routes = [
   {
     path: 'blog/detail/:id',
     component: BlogItemDetailsComponent
+  },
+  {
+    path: 'blog/add-post',
+    component: AddPostComponent
   }
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

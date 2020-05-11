@@ -19,6 +19,7 @@ import {FormsModule} from "@angular/forms";
 import { FilterPipe } from './pipes/filter.pipe';
 import { TextFormatDirective } from './directives/text-format.directive';
 import { SelectizeComponent } from './components/selectize/selectize.component';
+import { AddPostComponent } from './components/add-post/add-post.component';
 
 
 
@@ -38,6 +39,7 @@ import { SelectizeComponent } from './components/selectize/selectize.component';
     FilterPipe,
     TextFormatDirective,
     SelectizeComponent,
+    AddPostComponent,
   ],
   imports: [
     BrowserModule,
