@@ -1,9 +1,23 @@
+'use strict';
+
 import express from 'express';
-
+import morgan from 'morgan';
+import mongoose from 'mongoose';
+import config from './config';
+import routes from './REST/routes';
+import bodyParser from 'body-parser';
+import cors from 'cors';
 const app = express();
-app.use(express.json());
-app.use(express.static('public'));
 
-app.listen(3000, () => {
-  console.log('Server is running!');
+
+app.use(express.static('public'));
+app.use(morgan('dev'));
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+app.use(cors());
+
+
+routes(app);
+app.listen(config.port, () => {
+	console.info(`Server is running at ${config.port}`)
 });
