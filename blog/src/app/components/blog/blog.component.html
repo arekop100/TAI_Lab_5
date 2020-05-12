@@ -3,6 +3,6 @@
 <selectize></selectize>
 
 <div *ngFor="let item of items$ | filter: filterText">
-  <blog-item  [id]="item.id" [image]="item.image" [text]="item.text">
+  <blog-item  [id]="item.id" [image]="item.url" [text]="item.title">
   </blog-item>
 </div>
