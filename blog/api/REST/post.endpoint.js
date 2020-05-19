@@ -22,6 +22,19 @@ const postEndpoint = (router) => {
     }
   });
 
+
+
+  router.post('/api/posts/search', async (request, response, next) => {
+    try {
+      let result = await business(request).getPostManager().search(request.body);
+      response.status(200).send(result);
+    } catch (error) {
+      applicationException.errorHandler(error, response);
+    }
+  });
+
+
+
   router.post('/api/posts', async (request, response, next) => {
     try {
       let result = await business(request).getPostManager().createNewOrUpdate(request.body);

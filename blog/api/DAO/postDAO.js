@@ -33,6 +33,16 @@ async function get(id) {
   });
 }
 
+
+async function search(content) {
+  return PostModel.findOne({content}).then(function (result) {
+    if (result) {
+      return mongoConverter(result);
+    }
+  });
+}
+
+
 async function createNewOrUpdate(data) {
   return Promise.resolve().then(() => {
     if (!data.id) {
