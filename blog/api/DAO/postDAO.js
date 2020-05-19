@@ -33,15 +33,18 @@ async function get(id) {
   });
 }
 
-
 async function search(content) {
-  return PostModel.findOne({content}).then(function (result) {
+  if(content.content === ''){
+    return;
+  }
+
+  let regex = new RegExp('.*' + content.content + '.*', 'i');
+  return PostModel.find({content: regex}).then(function (result) {
     if (result) {
       return mongoConverter(result);
     }
   });
 }
-
 
 async function createNewOrUpdate(data) {
   return Promise.resolve().then(() => {
@@ -61,6 +64,6 @@ export default {
   query: query,
   get: get,
   createNewOrUpdate: createNewOrUpdate,
-
+  search: search,
   model: PostModel
 };
